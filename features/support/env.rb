@@ -67,9 +67,6 @@ Spork.prefork do
   # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
   Cucumber::Rails::Database.javascript_strategy = :truncation
 
-  # Require Factory girl factories for use in features
-  Dir[Rails.root.join("factories/**/*.rb")].each {|f| require f }
-
 end
 
 Spork.each_run do
