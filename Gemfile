@@ -34,6 +34,25 @@ gem 'thin'
 # Deploy with Capistrano
 # gem 'capistrano', group: :development
 
-# To use debugger
-gem 'debugger', group: [:development, :test]
+# Use haml instead of erb
+gem 'haml'
+gem "haml-rails"
 
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'debugger'
+end
+
+group :test do
+  gem 'faker'
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'launchy'
+  gem 'rb-inotify', '~> 0.9'
+  gem 'spork'
+  gem 'guard-spork'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+end
